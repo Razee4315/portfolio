@@ -32,21 +32,21 @@ const EducationSection = () => {
   const educationData = [
     {
       degree: "Bachelor of Science in Artificial Intelligence",
-      institution: "National University of Technology (NUTECH)",
+      institution: "National University of Technology (NUTECH) Islamabad, Pakistan",
       duration: "2023 - 2027",
       description: "Specializing in Machine Learning, Deep Learning, and AI Systems Development. Active member of the university's AI research group."
     },
     {
-      degree: "Associate Degree in Computer Science",
-      institution: "Punjab Group of Colleges",
+      degree: "HSSC Computer Science",
+      institution: "Public School and College Skardu, Pakistan",
       duration: "2020 - 2022",
-      description: "Focused on programming fundamentals, data structures, and software development principles."
+      description: "Studied computer science, programming along with mathematics and physics."
     },
     {
-      degree: "Matriculation in Computer Science",
-      institution: "Punjab School Education Board",
+      degree: "Matriculation",
+      institution: "Jinnah Public School and College Skardu, Pakistan",
       duration: "2018 - 2020",
-      description: "Completed with distinction, with special focus on mathematics and computer studies."
+      description: "Studied science subjects, including mathematics, biology, and physics."
     }
   ];
 
