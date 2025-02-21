@@ -40,7 +40,7 @@ A modern, responsive portfolio website built with React and TypeScript, showcasi
 
 1. Clone the repository
 ```bash
-git clone https://github.com/saqlainabbas777/portfolio.git
+git clone https://github.com/razee4315/portfolio.git
 ```
 
 2. Navigate to project directory
@@ -95,9 +95,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contact
 
-Saqlain Abbas - [LinkedIn](https://www.linkedin.com/in/saqlainabbas777)
+Saqlain Abbas - [LinkedIn](https://www.linkedin.com/in/saqlain.abbas)
 
-Project Link: [https://github.com/saqlainabbas777/portfolio](https://github.com/saqlainabbas777/portfolio)
+Project Link: [https://github.com/razee4315/portfolio](https://github.com/razee4315/portfolio)
 
 ---
 ⭐️ If you find this portfolio template helpful, please consider giving it a star!

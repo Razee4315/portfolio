@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Saqlain Abbas - AI Engineer Portfolio Website",
   "author": "Saqlain Abbas",
-  "homepage": "https://saqlainabbas777.github.io/portfolio",
+  "homepage": "https://Razee4315.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
