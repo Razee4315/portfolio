@@ -2,7 +2,6 @@ import { Box, Container, Typography, Grid, Card, CardContent, CardActions, Butto
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LaunchIcon from '@mui/icons-material/Launch';
 
 const StyledSection = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
@@ -12,59 +11,58 @@ const StyledSection = styled(Box)(({ theme }) => ({
   alignItems: 'center',
 }));
 
-const ProjectCard = styled(Card)(({ theme }) => ({
+const ProjectCard = styled(Card)({
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  transition: 'transform 0.3s ease-in-out',
   '&:hover': {
     transform: 'translateY(-5px)',
-    boxShadow: theme.shadows[10],
   },
-}));
+});
+
+const ProjectActions = styled(CardActions)({
+  marginTop: 'auto',
+  padding: '16px',
+  justifyContent: 'center',
+});
 
 const projects = [
   {
     title: "DisasterConnect",
     description: "A mission-critical platform revolutionizing disaster response coordination. Built with Python, Django, and WebSocket technology, it enables real-time resource allocation, emergency team coordination, and status updates during crisis situations. Features include interactive mapping, resource tracking, and priority-based task management.",
     technologies: ["Python", "Django", "WebSocket", "PostgreSQL", "Redis", "React"],
-    github: "https://github.com/Razee4315/DisasterConnect",
-    demo: "https://disaster-connect-demo.herokuapp.com"
+    github: "https://github.com/Razee4315/DisasterConnect"
   },
   {
     title: "BinarySearchTreeVisualization",
     description: "An innovative educational tool that brings data structures to life. This Qt/C++ application provides real-time visualization of BST operations, helping students master complex algorithms through interactive animations. Features step-by-step visualization, operation history, and customizable tree layouts.",
     technologies: ["C++", "Qt6", "OpenGL", "CMake"],
-    github: "https://github.com/Razee4315/BinarySearchTreeVisualization",
-    demo: "https://bst-viz-demo.netlify.app"
+    github: "https://github.com/Razee4315/BinarySearchTreeVisualization"
   },
   {
     title: "Panda Chat",
     description: "A modern, feature-rich real-time chat application built with TypeScript and React. Implements WebSocket for instant messaging, Firebase for authentication and data persistence, and features an intuitive UI with emoji support, file sharing, and end-to-end encryption.",
     technologies: ["TypeScript", "React", "Firebase", "WebSocket", "Material-UI"],
-    github: "https://github.com/Razee4315/panda_chat",
-    demo: "https://panda-chat-app.netlify.app"
+    github: "https://github.com/Razee4315/panda_chat"
   },
   {
     title: "FractalForge",
     description: "An advanced fractal visualization tool that combines mathematical precision with artistic expression. Built with Python and OpenGL, it offers real-time rendering of Mandelbrot and Julia sets, custom color palettes, and deep zoom capabilities up to 10^16x magnification.",
     technologies: ["Python", "OpenGL", "NumPy", "PyQt5"],
-    github: "https://github.com/Razee4315/FractalForge",
-    demo: "https://fractal-forge.netlify.app"
+    github: "https://github.com/Razee4315/FractalForge"
   },
   {
     title: "CaseKeeper",
     description: "A sophisticated legal case management system built with C# and .NET Core. Features document management, deadline tracking, client communication portal, and automated billing. Implements clean architecture and domain-driven design principles.",
     technologies: ["C#", ".NET Core", "Entity Framework", "SQL Server", "Azure"],
-    github: "https://github.com/Razee4315/CaseKeeper",
-    demo: "https://case-keeper.azurewebsites.net"
+    github: "https://github.com/Razee4315/CaseKeeper"
   },
   {
     title: "Flatmate Expense Manager",
     description: "A comprehensive solution for shared living expenses. This full-stack application streamlines expense tracking, bill splitting, and settlement between flatmates. Features real-time balance updates, expense categorization, and automated monthly reports.",
     technologies: ["React", "Node.js", "MongoDB", "Express", "Material-UI"],
-    github: "https://github.com/Razee4315/Flatmate_Expense_Manager",
-    demo: "https://flatmate-expense.herokuapp.com"
+    github: "https://github.com/Razee4315/Flatmate_Expense_Manager"
   }
 ];
 
@@ -116,26 +114,18 @@ const ProjectsSection = () => {
                       ))}
                     </Box>
                   </CardContent>
-                  <CardActions sx={{ p: 2, pt: 0 }}>
+                  <ProjectActions>
                     <Button
+                      variant="contained"
+                      color="primary"
                       startIcon={<GitHubIcon />}
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Code
+                      View Code
                     </Button>
-                    {project.demo && (
-                      <Button
-                        startIcon={<LaunchIcon />}
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Live Demo
-                      </Button>
-                    )}
-                  </CardActions>
+                  </ProjectActions>
                 </ProjectCard>
               </motion.div>
             </Grid>

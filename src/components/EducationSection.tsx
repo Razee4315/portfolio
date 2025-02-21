@@ -40,21 +40,13 @@ const EducationSection = () => {
       degree: "HSSC Computer Science",
       institution: "Public School and College Skardu, Pakistan",
       duration: "2020 - 2022",
-<<<<<<< HEAD
       description: "Studied computer science, programming, data structures, and networking along with mathematics and physics."
-=======
-      description: "Studied computer science, programming along with mathematics and physics."
->>>>>>> 7972afb6afe36831a69181dd04dd2d2964436ea1
     },
     {
       degree: "Matriculation",
       institution: "Jinnah Public School and College Skardu, Pakistan",
       duration: "2018 - 2020",
-<<<<<<< HEAD
       description: "Studied science subjects, including mathematics, physics, and computer science."
-=======
-      description: "Studied science subjects, including mathematics, biology, and physics."
->>>>>>> 7972afb6afe36831a69181dd04dd2d2964436ea1
     }
   ];
 
