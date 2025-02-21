@@ -1,0 +1,112 @@
+import { Box, Container, Typography } from '@mui/material';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import { styled } from '@mui/material/styles';
+import { motion } from 'framer-motion';
+import SchoolIcon from '@mui/icons-material/School';
+
+const StyledSection = styled(Box)(({ theme }) => ({
+  minHeight: '100vh',
+  padding: theme.spacing(15, 2),
+  background: theme.palette.background.paper,
+  display: 'flex',
+  alignItems: 'center',
+}));
+
+const TimelineItemContent = styled(Box)(({ theme }) => ({
+  background: theme.palette.background.paper,
+  padding: theme.spacing(3),
+  borderRadius: theme.spacing(2),
+  boxShadow: theme.shadows[3],
+  '&:hover': {
+    transform: 'translateY(-5px)',
+    transition: 'transform 0.3s ease',
+  },
+}));
+
+const EducationSection = () => {
+  const educationData = [
+    {
+      year: "2020 - 2024",
+      degree: "BS Artificial Intelligence",
+      institution: "National University of Technology (NUTECH), Islamabad",
+      description: "Specialized in Machine Learning, Deep Learning, and AI Applications"
+    },
+    {
+      year: "2018 - 2020",
+      degree: "FSc Pre-Engineering",
+      institution: "Public School & College Skardu (PSCS)",
+      description: "Focus on Mathematics, Physics, and Computer Science"
+    },
+    {
+      year: "2016 - 2018",
+      degree: "Matriculation",
+      institution: "Jinnah Public School (JPS)",
+      description: "Strong foundation in Science and Mathematics"
+    }
+  ];
+
+  return (
+    <StyledSection id="education">
+      <Container maxWidth="lg">
+        <Typography
+          variant="h2"
+          component={motion.h2}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          sx={{
+            mb: 6,
+            color: 'primary.main',
+            textAlign: 'center',
+            fontWeight: 'bold'
+          }}
+        >
+          Education
+        </Typography>
+
+        <Timeline position="alternate">
+          {educationData.map((item, index) => (
+            <TimelineItem key={index}>
+              <TimelineSeparator>
+                <TimelineDot color="primary">
+                  <SchoolIcon />
+                </TimelineDot>
+                {index !== educationData.length - 1 && <TimelineConnector />}
+              </TimelineSeparator>
+              <TimelineContent>
+                <motion.div
+                  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <TimelineItemContent>
+                    <Typography variant="h6" color="primary.main" fontWeight="bold">
+                      {item.degree}
+                    </Typography>
+                    <Typography variant="subtitle1" color="text.secondary">
+                      {item.year}
+                    </Typography>
+                    <Typography variant="body1" sx={{ mt: 1 }}>
+                      {item.institution}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                      {item.description}
+                    </Typography>
+                  </TimelineItemContent>
+                </motion.div>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </Container>
+    </StyledSection>
+  );
+};
+
+export default EducationSection;
