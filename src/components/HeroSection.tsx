@@ -6,7 +6,7 @@ const StyledSection = styled('section')({
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
-  background: 'linear-gradient(135deg, #2C3E50 0%, #3498DB 100%)',
+  background: 'linear-gradient(135deg, #1a237e 0%, #0d47a1 100%)',
   padding: '80px 0',
 });
 
@@ -19,8 +19,8 @@ const ContentWrapper = styled('div')({
 });
 
 const ProfileImage = styled('img')({
-  width: '350px',
-  height: '350px',
+  width: '450px',
+  height: '450px',
   borderRadius: '50%',
   marginBottom: '2rem',
   boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
