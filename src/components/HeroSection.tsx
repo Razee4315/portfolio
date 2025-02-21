@@ -6,7 +6,7 @@ const StyledSection = styled('section')({
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
-  background: 'linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%)',
+  background: 'linear-gradient(135deg, #001f3f 0%, #ffffff 100%)',
   padding: '80px 0',
 });
 
