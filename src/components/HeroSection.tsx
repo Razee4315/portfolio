@@ -6,7 +6,7 @@ const StyledSection = styled('section')({
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
-  background: 'linear-gradient(135deg, #1a237e 0%, #0d47a1 100%)',
+  background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
   padding: '80px 0',
 });
 
@@ -15,12 +15,12 @@ const ContentWrapper = styled('div')({
   maxWidth: '1200px',
   margin: '0 auto',
   padding: '0 20px',
-  color: '#fff',
+  color: '#000',
 });
 
 const ProfileImage = styled('img')({
-  width: '450px',
-  height: '450px',
+  width: '350px',
+  height: '350px',
   borderRadius: '50%',
   marginBottom: '2rem',
   boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
