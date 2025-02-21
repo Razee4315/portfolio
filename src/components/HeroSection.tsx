@@ -38,9 +38,7 @@ const HeroText = styled('div')`
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #1A237E, #7B1FA2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #1A237E;
   }
   h2 {
     font-family: 'Inter', sans-serif;
