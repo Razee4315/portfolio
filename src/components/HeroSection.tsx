@@ -6,7 +6,7 @@ const StyledSection = styled('section')({
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
-  background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+  background: 'linear-gradient(135deg, #2C3E50 0%, #3498DB 100%)',
   padding: '80px 0',
 });
 
@@ -15,15 +15,20 @@ const ContentWrapper = styled('div')({
   maxWidth: '1200px',
   margin: '0 auto',
   padding: '0 20px',
+  color: '#fff',
 });
 
 const ProfileImage = styled('img')({
-  width: '200px',
-  height: '200px',
+  width: '350px',
+  height: '350px',
   borderRadius: '50%',
   marginBottom: '2rem',
-  boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
+  boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
   border: '4px solid white',
+  transition: 'transform 0.3s ease',
+  '&:hover': {
+    transform: 'scale(1.02)',
+  },
 });
 
 const HeroText = styled('div')`
