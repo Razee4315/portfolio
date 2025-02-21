@@ -1,132 +1,99 @@
-import { Container, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import styled from '@emotion/styled';
 
 const StyledSection = styled('section')({
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
-  background: 'linear-gradient(135deg, #1A237E 0%, #7B1FA2 100%)',
+  background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
   padding: '80px 0',
-  position: 'relative',
-  overflow: 'hidden',
 });
 
-const ContentWrapper = styled(Container)({
-  position: 'relative',
-  zIndex: 1,
-  color: '#fff',
+const ContentWrapper = styled('div')({
   textAlign: 'center',
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: '0 20px',
 });
 
 const ProfileImage = styled('img')({
   width: '200px',
   height: '200px',
   borderRadius: '50%',
-  border: '4px solid #fff',
-  boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
   marginBottom: '2rem',
-  transition: 'transform 0.3s ease',
-  '&:hover': {
-    transform: 'scale(1.05)',
-  },
+  boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
+  border: '4px solid white',
 });
 
-const StyledTypography = styled(Typography)({
-  opacity: 0,
-  transform: 'translateY(20px)',
-});
+const HeroText = styled('div')`
+  text-align: center;
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #1A237E, #7B1FA2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #424242;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #616161;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+`;
 
 const HeroSection = () => {
-  const nameRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const descriptionRef = useRef<HTMLDivElement>(null);
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    const timeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-    timeline
-      .to(nameRef.current, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.5,
-      })
-      .to(
-        titleRef.current,
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-        },
-        '-=0.5'
-      )
-      .to(
-        descriptionRef.current,
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-        },
-        '-=0.5'
-      );
+    const elements = [nameRef.current, titleRef.current, descriptionRef.current];
+    elements.forEach((element, index) => {
+      if (element) {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          element.style.transition = 'all 0.5s ease';
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }, index * 200);
+      }
+    });
   }, []);
 
   return (
-    <StyledSection id="hero">
-      <ContentWrapper maxWidth="lg">
+    <StyledSection id="home">
+      <ContentWrapper>
         <motion.div
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
           <ProfileImage
-            src="/profile.jpg"
+            src="./profile.jpg"
             alt="Saqlain Abbas"
           />
         </motion.div>
 
-        <StyledTypography
-          ref={nameRef}
-          variant="h1"
-          sx={{
-            fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' },
-            fontWeight: 700,
-            mb: 2,
-            letterSpacing: '0.1em',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-          }}
-        >
-          Saqlain Abbas
-        </StyledTypography>
-
-        <StyledTypography
-          ref={titleRef}
-          variant="h2"
-          sx={{
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' },
-            fontWeight: 500,
-            mb: 3,
-            color: 'rgba(255,255,255,0.9)',
-          }}
-        >
-          AI Engineer & Machine Learning Expert
-        </StyledTypography>
-
-        <StyledTypography
-          ref={descriptionRef}
-          variant="h6"
-          sx={{
-            maxWidth: '800px',
-            margin: '0 auto',
-            color: 'rgba(255,255,255,0.8)',
-            lineHeight: 1.6,
-          }}
-        >
-          Transforming ideas into intelligent solutions through AI innovation
-        </StyledTypography>
+        <HeroText>
+          <h1 ref={nameRef}>Saqlain Abbas</h1>
+          <h2 ref={titleRef}>AI Engineer & Machine Learning Expert</h2>
+          <p ref={descriptionRef}>Transforming ideas into intelligent solutions through AI innovation</p>
+        </HeroText>
       </ContentWrapper>
     </StyledSection>
   );

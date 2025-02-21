@@ -31,22 +31,22 @@ const TimelineItemContent = styled(Box)(({ theme }) => ({
 const EducationSection = () => {
   const educationData = [
     {
-      year: "2020 - 2024",
-      degree: "BS Artificial Intelligence",
-      institution: "National University of Technology (NUTECH), Islamabad",
-      description: "Specialized in Machine Learning, Deep Learning, and AI Applications"
+      degree: "Bachelor of Science in Artificial Intelligence",
+      institution: "National University of Technology (NUTECH)",
+      duration: "2023 - 2027",
+      description: "Specializing in Machine Learning, Deep Learning, and AI Systems Development. Active member of the university's AI research group."
     },
     {
-      year: "2018 - 2020",
-      degree: "FSc Pre-Engineering",
-      institution: "Public School & College Skardu (PSCS)",
-      description: "Focus on Mathematics, Physics, and Computer Science"
+      degree: "Associate Degree in Computer Science",
+      institution: "Punjab Group of Colleges",
+      duration: "2020 - 2022",
+      description: "Focused on programming fundamentals, data structures, and software development principles."
     },
     {
-      year: "2016 - 2018",
-      degree: "Matriculation",
-      institution: "Jinnah Public School (JPS)",
-      description: "Strong foundation in Science and Mathematics"
+      degree: "Matriculation in Computer Science",
+      institution: "Punjab School Education Board",
+      duration: "2018 - 2020",
+      description: "Completed with distinction, with special focus on mathematics and computer studies."
     }
   ];
 
@@ -90,7 +90,7 @@ const EducationSection = () => {
                       {item.degree}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
-                      {item.year}
+                      {item.duration}
                     </Typography>
                     <Typography variant="body1" sx={{ mt: 1 }}>
                       {item.institution}

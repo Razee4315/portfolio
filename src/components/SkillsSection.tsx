@@ -69,10 +69,31 @@ const IconWrapper = styled(Box)(({ theme }) => ({
 
 const skillsData = [
   {
-    category: "Machine Learning",
+    category: "Machine Learning & AI",
     icon: <PsychologyIcon />,
     bgIcon: <AutoFixHighIcon />,
-    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Neural Networks", "Deep Learning"]
+    skills: [
+      {
+        name: "Deep Learning",
+        icon: "🧠",
+        level: "Expert"
+      },
+      {
+        name: "Computer Vision",
+        icon: "👁️",
+        level: "Advanced"
+      },
+      {
+        name: "Natural Language Processing",
+        icon: "📝",
+        level: "Advanced"
+      },
+      {
+        name: "TensorFlow & PyTorch",
+        icon: "🔮",
+        level: "Expert"
+      }
+    ]
   },
   {
     category: "Computer Vision",
@@ -156,7 +177,7 @@ const SkillsSection = () => {
                           }
                         }}
                       >
-                        {skill}
+                        {typeof skill === 'object' ? `${skill.name} (${skill.level})` : skill}
                       </Typography>
                     ))}
                   </Box>

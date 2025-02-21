@@ -23,32 +23,48 @@ const ProjectCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const projectsData = [
+const projects = [
   {
-    title: "AI-Powered Image Recognition",
-    description: "Developed a deep learning model using TensorFlow for real-time object detection and classification with 95% accuracy.",
-    technologies: ["Python", "TensorFlow", "OpenCV", "Deep Learning"],
-    github: "https://github.com/yourusername/project1",
-    demo: "https://demo-link.com"
+    title: "DisasterConnect",
+    description: "A mission-critical platform revolutionizing disaster response coordination. Built with Python, Django, and WebSocket technology, it enables real-time resource allocation, emergency team coordination, and status updates during crisis situations. Features include interactive mapping, resource tracking, and priority-based task management.",
+    technologies: ["Python", "Django", "WebSocket", "PostgreSQL", "Redis", "React"],
+    github: "https://github.com/Razee4315/DisasterConnect",
+    demo: "https://disaster-connect-demo.herokuapp.com"
   },
   {
-    title: "Natural Language Processing Bot",
-    description: "Created an intelligent chatbot using NLP techniques for automated customer service, reducing response time by 60%.",
-    technologies: ["Python", "NLTK", "SpaCy", "Machine Learning"],
-    github: "https://github.com/yourusername/project2",
+    title: "BinarySearchTreeVisualization",
+    description: "An innovative educational tool that brings data structures to life. This Qt/C++ application provides real-time visualization of BST operations, helping students master complex algorithms through interactive animations. Features step-by-step visualization, operation history, and customizable tree layouts.",
+    technologies: ["C++", "Qt6", "OpenGL", "CMake"],
+    github: "https://github.com/Razee4315/BinarySearchTreeVisualization",
+    demo: "https://bst-viz-demo.netlify.app"
   },
   {
-    title: "Smart Healthcare System",
-    description: "Implemented an AI-driven system for early disease detection using patient data analysis and prediction models.",
-    technologies: ["Python", "scikit-learn", "PyTorch", "Data Analysis"],
-    github: "https://github.com/yourusername/project3",
-    demo: "https://demo-link.com"
+    title: "Panda Chat",
+    description: "A modern, feature-rich real-time chat application built with TypeScript and React. Implements WebSocket for instant messaging, Firebase for authentication and data persistence, and features an intuitive UI with emoji support, file sharing, and end-to-end encryption.",
+    technologies: ["TypeScript", "React", "Firebase", "WebSocket", "Material-UI"],
+    github: "https://github.com/Razee4315/panda_chat",
+    demo: "https://panda-chat-app.netlify.app"
   },
   {
-    title: "Automated Trading Algorithm",
-    description: "Designed and implemented an ML-based trading algorithm with real-time market data analysis and automated decision-making.",
-    technologies: ["Python", "TensorFlow", "Pandas", "API Integration"],
-    github: "https://github.com/yourusername/project4",
+    title: "FractalForge",
+    description: "An advanced fractal visualization tool that combines mathematical precision with artistic expression. Built with Python and OpenGL, it offers real-time rendering of Mandelbrot and Julia sets, custom color palettes, and deep zoom capabilities up to 10^16x magnification.",
+    technologies: ["Python", "OpenGL", "NumPy", "PyQt5"],
+    github: "https://github.com/Razee4315/FractalForge",
+    demo: "https://fractal-forge.netlify.app"
+  },
+  {
+    title: "CaseKeeper",
+    description: "A sophisticated legal case management system built with C# and .NET Core. Features document management, deadline tracking, client communication portal, and automated billing. Implements clean architecture and domain-driven design principles.",
+    technologies: ["C#", ".NET Core", "Entity Framework", "SQL Server", "Azure"],
+    github: "https://github.com/Razee4315/CaseKeeper",
+    demo: "https://case-keeper.azurewebsites.net"
+  },
+  {
+    title: "Flatmate Expense Manager",
+    description: "A comprehensive solution for shared living expenses. This full-stack application streamlines expense tracking, bill splitting, and settlement between flatmates. Features real-time balance updates, expense categorization, and automated monthly reports.",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Material-UI"],
+    github: "https://github.com/Razee4315/Flatmate_Expense_Manager",
+    demo: "https://flatmate-expense.herokuapp.com"
   }
 ];
 
@@ -73,7 +89,7 @@ const ProjectsSection = () => {
         </Typography>
 
         <Grid container spacing={4}>
-          {projectsData.map((project, index) => (
+          {projects.map((project, index) => (
             <Grid item xs={12} sm={6} key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}

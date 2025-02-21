@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
 
 const StyledSection = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
@@ -27,6 +26,27 @@ const ContactCard = styled(Paper)(({ theme }) => ({
 }));
 
 const ContactSection = () => {
+  const contactLinks = [
+    {
+      name: 'Email',
+      icon: <EmailIcon />,
+      link: 'mailto:saqlainrazee@gmail.com',
+      text: 'saqlainrazee@gmail.com'
+    },
+    {
+      name: 'LinkedIn',
+      icon: <LinkedInIcon />,
+      link: 'https://www.linkedin.com/in/saqlainrazee',
+      text: 'linkedin.com/in/saqlainrazee'
+    },
+    {
+      name: 'GitHub',
+      icon: <GitHubIcon />,
+      link: 'https://github.com/Razee4315',
+      text: 'github.com/Razee4315'
+    }
+  ];
+
   return (
     <StyledSection id="contact">
       <Container maxWidth="lg">
@@ -99,26 +119,13 @@ const ContactSection = () => {
                     Connect With Me
                   </Typography>
                   <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 2 }}>
-                    <a href="mailto:saqlainrazee@gmail.com" style={{ textDecoration: 'none' }}>
-                      <IconButton color="primary">
-                        <EmailIcon />
-                      </IconButton>
-                    </a>
-                    <a href="https://linkedin.com/in/Razee4315" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                      <IconButton color="primary">
-                        <LinkedInIcon />
-                      </IconButton>
-                    </a>
-                    <a href="https://github.com/Razee4315" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                      <IconButton color="primary">
-                        <GitHubIcon />
-                      </IconButton>
-                    </a>
-                    <a href="https://twitter.com/Razee4315" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                      <IconButton color="primary">
-                        <TwitterIcon />
-                      </IconButton>
-                    </a>
+                    {contactLinks.map((link, index) => (
+                      <a href={link.link} key={index} style={{ textDecoration: 'none' }}>
+                        <IconButton color="primary">
+                          {link.icon}
+                        </IconButton>
+                      </a>
+                    ))}
                   </Box>
                 </Box>
               </ContactCard>
