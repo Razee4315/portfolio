@@ -6,7 +6,7 @@ const StyledSection = styled('section')({
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
-  background: 'linear-gradient(135deg, #001f3f 0%, #ffffff 100%)',
+  background: 'linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%)',
   padding: '80px 0',
 });
 
@@ -38,13 +38,13 @@ const HeroText = styled('div')`
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #1A237E;
+    color: #ffffff;
   }
   h2 {
     font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 500;
-    color: #424242;
+    color: #e0e0e0;
     margin-bottom: 2rem;
     line-height: 1.4;
   }
@@ -52,7 +52,7 @@ const HeroText = styled('div')`
     font-family: 'Inter', sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #616161;
+    color: #bdbdbd;
     max-width: 800px;
     margin: 0 auto;
   }
