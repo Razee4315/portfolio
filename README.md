@@ -95,7 +95,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contact
 
-Saqlain Abbas - [LinkedIn](https://www.linkedin.com/in/saqlain.abbas)
+Saqlain Abbas - [LinkedIn](https://www.linkedin.com/in/saqlain.razee)
 
 Project Link: [https://github.com/razee4315/portfolio](https://github.com/razee4315/portfolio)
 
