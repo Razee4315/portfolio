@@ -3,7 +3,6 @@ import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import DataObjectIcon from '@mui/icons-material/DataObject';
-import StorageIcon from '@mui/icons-material/Storage';
 import CodeIcon from '@mui/icons-material/Code';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import TerminalIcon from '@mui/icons-material/Terminal';
@@ -68,7 +67,17 @@ const IconWrapper = styled(Box)(({ theme }) => ({
   }
 }));
 
-const skillsData = [
+// Define types for skill items
+type SkillItem = string | { name: string; level: string };
+
+type SkillCategory = {
+  category: string;
+  icon: React.ReactNode;
+  bgIcon: React.ReactNode;
+  skills: SkillItem[];
+};
+
+const skillsData: SkillCategory[] = [
   {
     category: "Programming Languages",
     icon: <CodeIcon />,
@@ -157,7 +166,7 @@ const SkillsSection = () => {
                           }
                         }}
                       >
-                        {typeof skill === 'object' ? `${skill.name} (${skill.level})` : skill}
+                        {typeof skill === 'object' && 'name' in skill ? `${skill.name} (${skill.level})` : skill}
                       </Typography>
                     ))}
                   </Box>
