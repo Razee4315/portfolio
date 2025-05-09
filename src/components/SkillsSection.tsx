@@ -7,9 +7,10 @@ import StorageIcon from '@mui/icons-material/Storage';
 import CodeIcon from '@mui/icons-material/Code';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import TerminalIcon from '@mui/icons-material/Terminal';
-import CloudIcon from '@mui/icons-material/Cloud';
-import MemoryIcon from '@mui/icons-material/Memory';
+import WebIcon from '@mui/icons-material/Web';
+import BuildIcon from '@mui/icons-material/Build';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import PersonIcon from '@mui/icons-material/Person';
 
 const StyledSection = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
@@ -69,55 +70,34 @@ const IconWrapper = styled(Box)(({ theme }) => ({
 
 const skillsData = [
   {
-    category: "Machine Learning & AI",
-    icon: <PsychologyIcon />,
-    bgIcon: <AutoFixHighIcon />,
-    skills: [
-      {
-        name: "Deep Learning",
-        icon: "🧠",
-        level: "Expert"
-      },
-      {
-        name: "Computer Vision",
-        icon: "👁️",
-        level: "Advanced"
-      },
-      {
-        name: "Natural Language Processing",
-        icon: "📝",
-        level: "Advanced"
-      },
-      {
-        name: "TensorFlow & PyTorch",
-        icon: "🔮",
-        level: "Expert"
-      }
-    ]
-  },
-  {
-    category: "Computer Vision",
-    icon: <BiotechIcon />,
-    bgIcon: <MemoryIcon />,
-    skills: ["OpenCV", "Image Processing", "Object Detection", "Face Recognition", "Video Analysis"]
-  },
-  {
-    category: "Natural Language Processing",
-    icon: <StorageIcon />,
-    bgIcon: <CloudIcon />,
-    skills: ["NLTK", "Transformers", "Sentiment Analysis", "Text Generation", "Named Entity Recognition"]
-  },
-  {
-    category: "Programming",
+    category: "Programming Languages",
     icon: <CodeIcon />,
     bgIcon: <DataObjectIcon />,
-    skills: ["Python", "JavaScript", "TypeScript", "C++", "SQL"]
+    skills: ["Python", "JavaScript", "SQL", "R", "Java", "C++"]
+  },
+  {
+    category: "Web Development",
+    icon: <WebIcon />,
+    bgIcon: <CodeIcon />,
+    skills: ["React", "Django", "HTML5", "CSS", "WebSocket", "Gradio"]
+  },
+  {
+    category: "AI And Data Science",
+    icon: <PsychologyIcon />,
+    bgIcon: <AutoFixHighIcon />,
+    skills: ["LLM Fine-tuning", "Custom Chatbot Development", "Image Processing Basics", "Data Analysis and Visualization"]
   },
   {
     category: "Development Tools",
     icon: <TerminalIcon />,
-    bgIcon: <CodeIcon />,
-    skills: ["Git", "Docker", "AWS", "Linux", "VS Code"]
+    bgIcon: <BuildIcon />,
+    skills: ["Git", "GitHub", "VS Code", "Visual Studio", "Jupyter Notebooks", "Spyder"]
+  },
+  {
+    category: "Key Competencies",
+    icon: <PersonIcon />,
+    bgIcon: <BiotechIcon />,
+    skills: ["Analytical Problem-Solving", "Attention to Detail", "Proactive Learning", "Team Collaboration"]
   }
 ];
 

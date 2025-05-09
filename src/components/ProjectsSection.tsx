@@ -30,39 +30,39 @@ const ProjectActions = styled(CardActions)({
 const projects = [
   {
     title: "DisasterConnect",
-    description: "A mission-critical platform revolutionizing disaster response coordination. Built with Python, Django, and WebSocket technology, it enables real-time resource allocation, emergency team coordination, and status updates during crisis situations. Features include interactive mapping, resource tracking, and priority-based task management.",
-    technologies: ["Python", "Django", "WebSocket", "PostgreSQL", "Redis", "React"],
+    description: "A web platform for disaster response, featuring real-time communication and interactive mapping.",
+    technologies: ["Python", "Django", "React", "WebSocket", "PostgreSQL"],
     github: "https://github.com/Razee4315/DisasterConnect"
   },
   {
     title: "BinarySearchTreeVisualization",
-    description: "An innovative educational tool that brings data structures to life. This Qt/C++ application provides real-time visualization of BST operations, helping students master complex algorithms through interactive animations. Features step-by-step visualization, operation history, and customizable tree layouts.",
+    description: "An educational tool providing real-time visualization of BST operations through interactive animations.",
     technologies: ["C++", "Qt6", "OpenGL", "CMake"],
     github: "https://github.com/Razee4315/BinarySearchTreeVisualization"
   },
   {
     title: "Panda Chat",
-    description: "A modern, feature-rich real-time chat application built with TypeScript and React. Implements WebSocket for instant messaging, Firebase for authentication and data persistence, and features an intuitive UI with emoji support, file sharing, and end-to-end encryption.",
+    description: "A modern real-time chat application with instant messaging, file sharing, and an intuitive user interface.",
     technologies: ["TypeScript", "React", "Firebase", "WebSocket", "Material-UI"],
     github: "https://github.com/Razee4315/panda_chat"
   },
   {
-    title: "FractalForge",
-    description: "An advanced fractal visualization tool that combines mathematical precision with artistic expression. Built with Python and OpenGL, it offers real-time rendering of Mandelbrot and Julia sets, custom color palettes, and deep zoom capabilities up to 10^16x magnification.",
-    technologies: ["Python", "OpenGL", "NumPy", "PyQt5"],
-    github: "https://github.com/Razee4315/FractalForge"
+    title: "Nutech Chatbot Assistant",
+    description: "Fine-tuned an LLM on university data to create a custom chatbot, deployed with Gradio for interactive use.",
+    technologies: ["Python", "LLM Fine-tuning", "Gradio"],
+    github: "#"
   },
   {
-    title: "CaseKeeper",
-    description: "A sophisticated legal case management system built with C# and .NET Core. Features document management, deadline tracking, client communication portal, and automated billing. Implements clean architecture and domain-driven design principles.",
-    technologies: ["C#", ".NET Core", "Entity Framework", "SQL Server", "Azure"],
-    github: "https://github.com/Razee4315/CaseKeeper"
+    title: "NUTECH Virtual Tour",
+    description: "An interactive campus tour using React and 360° media, focusing on optimized user experience.",
+    technologies: ["React", "JavaScript", "360° Media"],
+    github: "https://razee4315.github.io/nutech-tour"
   },
   {
-    title: "Flatmate Expense Manager",
-    description: "A comprehensive solution for shared living expenses. This full-stack application streamlines expense tracking, bill splitting, and settlement between flatmates. Features real-time balance updates, expense categorization, and automated monthly reports.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Material-UI"],
-    github: "https://github.com/Razee4315/Flatmate_Expense_Manager"
+    title: "Pitch and Yaw Coordinate Finder",
+    description: "An HTML5/JavaScript tool to extract spherical coordinates from images, addressing a specific technical gap.",
+    technologies: ["HTML5", "JavaScript", "Image Processing"],
+    github: "https://razee4315.github.io/pitch-and-yaw-finder"
   }
 ];
 
@@ -115,16 +115,18 @@ const ProjectsSection = () => {
                     </Box>
                   </CardContent>
                   <ProjectActions>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      startIcon={<GitHubIcon />}
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View Code
-                    </Button>
+                    {project.title !== "Nutech Chatbot Assistant" && (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        startIcon={<GitHubIcon />}
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Code
+                      </Button>
+                    )}
                   </ProjectActions>
                 </ProjectCard>
               </motion.div>

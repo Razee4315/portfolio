@@ -1,6 +1,6 @@
-# Saqlain Abbas - AI Engineer Portfolio
+# Saqlain Abbas - AI & Machine Learning Portfolio
 
-A modern, responsive portfolio website built with React and TypeScript, showcasing my professional journey and expertise in Artificial Intelligence and Machine Learning.
+A modern, responsive portfolio website built with React and TypeScript, showcasing my journey as an AI & Machine Learning student with projects, skills, and educational background.
 
 ## 🚀 Features
 
@@ -9,9 +9,10 @@ A modern, responsive portfolio website built with React and TypeScript, showcasi
 - **Interactive Sections**: 
   - About Me
   - Education Timeline
-  - Skills Showcase
-  - Project Gallery
-  - Contact Form
+  - Technical Expertise Showcase
+  - Project Gallery with GitHub Links
+  - Functional Contact Form (via Formspree)
+  - Downloadable CV
 - **Performance Optimized**: Built with Vite for lightning-fast load times
 - **Clean Architecture**: TypeScript for type safety and better code organization
 
@@ -26,6 +27,9 @@ A modern, responsive portfolio website built with React and TypeScript, showcasi
 - **Styling**: 
   - Emotion
   - Styled Components
+- **Form Handling**: 
+  - Formspree integration
+  - Form validation
 - **Type Checking**: TypeScript
 - **Code Quality**: ESLint & Prettier
 
@@ -88,6 +92,21 @@ portfolio/
 1. Theme customization in `src/theme.ts`
 2. Content modification in respective component files
 3. Add new sections by creating components in `src/components`
+
+## 📄 CV Download
+
+The portfolio includes a CV download button in the hero section. To update your CV:
+
+1. Replace the `SaqlainAbbas_CV.pdf` file in the `public` directory with your updated CV
+2. Keep the same filename or update the reference in `HeroSection.tsx`
+
+## 📬 Contact Form
+
+The contact form is integrated with Formspree for email delivery:
+
+1. Messages submitted through the contact form are sent directly to your Gmail
+2. Formspree handles spam filtering and email delivery
+3. The form includes validation and success/error notifications
 
 ## 📝 License
 
