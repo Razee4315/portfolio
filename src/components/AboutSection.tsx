@@ -11,6 +11,9 @@ const StyledSection = styled(Box)(({ theme }) => ({
   background: theme.palette.background.default,
   display: 'flex',
   alignItems: 'center',
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(10, 2),
+  },
 }));
 
 const FeatureCard = styled(Paper)(({ theme }) => ({
@@ -27,6 +30,9 @@ const FeatureCard = styled(Paper)(({ theme }) => ({
   transition: 'transform 0.3s ease',
   '&:hover': {
     transform: 'translateY(-10px)',
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(3),
   },
 }));
 
@@ -68,7 +74,8 @@ const AboutSection = () => {
             mb: 6,
             color: 'primary.main',
             textAlign: 'center',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            fontSize: { xs: '2.5rem', sm: '3rem', md: '3.75rem' }
           }}
         >
           About Me
@@ -86,8 +93,13 @@ const AboutSection = () => {
                 textAlign="center" 
                 maxWidth="800px" 
                 mx="auto" 
-                mb={8}
+                mb={{ xs: 4, sm: 6, md: 8 }}
                 color="text.secondary"
+                sx={{
+                  fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
+                  lineHeight: { xs: 1.4, sm: 1.5, md: 1.5 },
+                  padding: { xs: '0 10px', sm: '0 15px', md: 0 }
+                }}
               >
                 From the mountains of Skardu to the frontiers of AI, I'm on a mission to create intelligent solutions that make a difference. Blending creativity with technical expertise to shape tomorrow's technology.
               </Typography>
@@ -106,10 +118,25 @@ const AboutSection = () => {
                   <IconWrapper>
                     {feature.icon}
                   </IconWrapper>
-                  <Typography variant="h5" gutterBottom fontWeight="bold" color="primary.main">
+                  <Typography 
+                    variant="h5" 
+                    gutterBottom 
+                    fontWeight="bold" 
+                    color="primary.main"
+                    sx={{ 
+                      fontSize: { xs: '1.2rem', sm: '1.3rem', md: '1.5rem' }
+                    }}
+                  >
                     {feature.title}
                   </Typography>
-                  <Typography variant="body1" color="text.secondary">
+                  <Typography 
+                    variant="body1" 
+                    color="text.secondary"
+                    sx={{ 
+                      fontSize: { xs: '0.95rem', sm: '1rem', md: '1rem' },
+                      lineHeight: { xs: 1.5, sm: 1.6 }
+                    }}
+                  >
                     {feature.description}
                   </Typography>
                 </FeatureCard>
