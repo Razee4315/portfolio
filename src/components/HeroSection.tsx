@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import StarfieldBackground from './StarfieldBackground';
+import LangtonAntBackground from './LangtonAntBackground';
 
 const StyledSection = styled('section')`
   min-height: 100vh;
@@ -221,7 +221,7 @@ const HeroSection = () => {
 
   return (
     <StyledSection id="home">
-      <StarfieldBackground />
+      <LangtonAntBackground />
       <ContentWrapper>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
